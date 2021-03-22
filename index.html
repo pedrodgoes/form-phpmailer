@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <title>Teste Paytour</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <h1 class="title has-text-centered">Formulário</h1>
+
+            <form action="send.php" method="POST" enctype="multipart/form-data">
+              <div class="field">
+                <label class="label">Nome</label>
+                <div class="control">
+                  <input
+                    name="nome"
+                    class="input"
+                    type="text"
+                    placeholder="Nome"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">E-mail</label>
+                <div class="control">
+                  <input
+                    name="email"
+                    class="input"
+                    type="email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Número Telefone</label>
+                <div class="control">
+                  <input
+                    name="telefone"
+                    class="input"
+                    type="text"
+                    placeholder="(00)00000-0000"
+                    onkeypress="mascara(this)"
+                    maxlength="15"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Cargo Desejado</label>
+                <div class="control">
+                  <input
+                    name="cargo"
+                    class="input"
+                    type="text"
+                    placeholder="Cargo Desejado"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Escolaridade</label>
+                <div class="control">
+                  <div class="select is-fullwidth" required>
+                    <select name="escolaridade">
+                      <option>---</option>
+                      <option>Ensino Fundamental Incompleto</option>
+                      <option>Ensino Fundamental</option>
+                      <option>Ensino Médio Incompleto</option>
+                      <option>Ensino Médio</option>
+                      <option>Ensino Técnico</option>
+                      <option>Ensino Técnico Incompleto</option>
+                      <option>Ensino Superior</option>
+                      <option>Ensino Superior Incompleto</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Observações</label>
+                <div class="control">
+                  <textarea
+                    name="observacoes"
+                    class="textarea"
+                    maxlength="2000"
+                    placeholder="Suas observações"
+                  ></textarea>
+                </div>
+              </div>
+
+              <input
+                type="file"
+                id="avatar"
+                name="arquivo"
+                accept=".doc, .docx, .pdf"
+                style="margin-bottom: 20px;"
+                required
+              />
+              <br />
+
+              <div class="filed is-grouped">
+                <div class="control">
+                  <button class="button is-link is-meddium">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function mascara(telefone) {
+    if (telefone.value.length == 0) telefone.value = '(' + telefone.value
+    if (telefone.value.length == 3) telefone.value = telefone.value + ') '
+    if (telefone.value.length == 10) telefone.value = telefone.value + '-'
+  }
+</script>
