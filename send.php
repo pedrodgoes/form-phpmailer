@@ -71,14 +71,14 @@ $MAIL = new PHPMailer();
 $MAIL->isSMTP(); //Send using SMTP
 $MAIL->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 $MAIL->SMTPAuth = true; //Enable SMTP authentication
-$MAIL->Username = '######@gmail.com'; //SMTP username
-$MAIL->Password = '######'; //SMTP password
+$MAIL->Username = 'teste@gmail.com'; //SMTP username
+$MAIL->Password = 'teste'; //SMTP password
 $MAIL->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $MAIL->Port = 587; //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 //Recipients
-$MAIL->setFrom('flashwaynethor@gmail.com', 'Mailer');
-$MAIL->addAddress('flashwaynethor@gmail.com', 'Joe User'); //Add a recipient
+$MAIL->setFrom('teste@gmail.com', 'Mailer');
+$MAIL->addAddress('teste@gmail.com', 'Joe User'); //Add a recipient
 
 //Attachments
 $MAIL->addAttachment('/var/tmp/file.tar.gz'); //Add attachments
